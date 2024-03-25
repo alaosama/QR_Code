@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Reader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="content-data">
+        <p><i class="fa-solid fa-qrcode"></i></p>
+        <textarea id="qr-text" cols="30" rows="10" class="hide-view"></textarea>
+    
+        <div class="qr-code-view">
+            <img id="qr-code-img" alt="qr code" class="hide-view">
+            <p id="select-img-btn"><i class="fa-regular fa-images">&nbsp;Select Image</i></p>
+            <input type="file" accept="" id="select-img-btn" id="input-select-img" hidden>
+        </div>
+
+        <div class="control-btns">
+            <button id="read-qr-btn">Read QR&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+            <button id="copy-qr-btn">Copy QR&nbsp;<i class="fa-regular fa-copy"></i></button>
+        </div>
+    
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
