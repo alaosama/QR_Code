@@ -44,3 +44,36 @@ body {
     border: 1px solid rgba(0,0,0,0.1);
     border-radius: 5px;
 }
+
+ /* qr code view area */
+
+.qr-code-view {
+    height: 300px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.qr-code-view img {
+    height: 200px;
+    width: 200px;
+}
+
+.qr-code-view-area #select {
+    padding: 12px 20px;
+    margin-top: 10px;
+    width: 100%;
+    transition: 0.4s;
+    color: rgba(0,0,0,0.8);
+    border: 1px solid rgba(0,0,0,0.8);
+    border-radius: 5px;
+}
+
+.qr-code-view-area #select:active {
+    background: var(--primary_color);
+    color: var(--white_color);
+    transform: scale(0.95);
+}
