@@ -1,0 +1,21 @@
+:root{
+    --primary_color: #229954;
+    --dark_color: #333;
+    --light_color: #f4f4f4;
+    --white_color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popins', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, var(--primary_color), var(--light_color));
+}
