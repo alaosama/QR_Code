@@ -19,3 +19,17 @@ body {
     align-items: center;
     background: linear-gradient(90deg, var(--primary_color), var(--light_color));
 }
+
+.content-data {
+    position: relative;
+    width: 420px;
+    padding: 10px;
+    background: var(--white_color);
+    border-radius: 5px;
+    box-shadow: 0.1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content-data p {
+    font-size: 18px;
+    color: var(--dark_color);
+}
