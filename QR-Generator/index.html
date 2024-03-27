@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div>
-        <p>QR-Generator</p>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+    <div class="content-data">
+        <p><i class="fa-solid fa-qrcode"></i>&nbsp;QR-Generator</p>
+        <textarea id="input_qr_text" cols="30" rows="10" placeholder="Write some text ..."></textarea>
+    </div>
+
+    <div class="qr_code_view hide_view">
+        <img id="qr_code_img" src="" alt="qr code">
     </div>
 
     <div class="controle_btns">
-        <button class="generate_qr_btn">Generate</button>
-        <button class="generate_qr_btn">Generate</button>
+        <button class="generate_qr_btn">Generate&nbsp;<i class="fa-solid fa-right-long"></i></button>
+        <button class="download_qr_btn disable_btn">Download&nbsp;<i class="fa-solid fa-download"></i></button>
     </div>
     
 </body>
