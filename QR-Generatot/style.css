@@ -1,0 +1,31 @@
+:root{
+    --bcg-color: #034e37;
+    --primary-color: #033520;
+    --border-radius: 12px; /* Augmenté le border-radius */
+    --secondary-color: #389d3f;
+    --border-color: #7fb7c9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Ajouté des polices de caractères plus modernes */
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bcg-color);
+}
+
+.box{
+    background-color: var(--primary-color);
+    padding: 40px; /* Augmenté le padding */
+    width: 450px; /* Augmenté la largeur */
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajouté une légère ombre */
+}
