@@ -29,3 +29,82 @@ body{
     border-radius: var(--border-radius);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajouté une légère ombre */
 }
+
+.qr-header h1{
+    font-size: 32px; /* Augmenté la taille de police */
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.qr-header input{
+    width: 100%;
+    margin: 12px 0; /* Modifié la marge */
+}
+
+.qr-header input, select{
+    padding: 12px; /* Réduit le padding */
+    border-radius: var(--border-radius);
+    font-size: 16px; /* Réduit la taille de police */
+    outline: none;
+    border: 2px solid var(--border-color);
+}
+
+.qr-header label{
+    color: rgb(255, 255, 255);
+    font-size: 18px; /* Augmenté la taille de police */
+}
+
+.qr-header div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.qr-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 24px; /* Ajouté une marge en haut */
+}
+
+.qr-footer a{
+    background-color: #5f725f;
+    text-decoration: none;
+    font-size: 18px; /* Réduit la taille de police */
+    padding: 14px 24px; /* Réduit le padding */
+    margin: 0 8px; /* Modifié la marge */
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease; /* Ajouté une transition en douceur */
+}
+
+.qr-footer a:hover {
+    background-color: #1da283; /* Changé la couleur de fond au survol */
+}
+
+.qr-body{
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.qr-body img{
+    max-width: 100%;
+    max-height: 100%;
+    margin: 10px 0; /* Modifié la marge */
+    padding: 16px; /* Augmenté le padding */
+    border: 1px solid var(--border-color); /* Réduit l'épaisseur de la bordure */
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajouté une légère ombre */
+}
+
+@media screen and (max-width:520px){
+    .box{
+        width: 90%; /* Augmenté la largeur */
+    }
+    .qr-footer a{
+        padding: 10px 20px; /* Réduit le padding */
+        font-size: 16px;
+    }
+}
