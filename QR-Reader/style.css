@@ -44,3 +44,84 @@ body {
     border: 1px solid rgba(0,0,0,0.1);
     border-radius: 5px;
 }
+
+ /* qr code view area */
+
+.qr-code-view {
+    height: 300px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.qr-code-view img {
+    height: 200px;
+    width: 200px;
+}
+
+.qr-code-img #select-img-btn {
+    padding: 12px 20px;
+    margin-top: 10px;
+    width: 100%;
+    transition: 0.4s;
+    color: rgba(0,0,0,0.8);
+    border: 1px solid rgba(0,0,0,0.8);
+    border-radius: 5px;
+}
+
+.qr-code-view-area #select-img-btn:active {
+    background: var(--primary_color);
+    color: var(--white_color);
+    transform: scale(0.95);
+}
+
+/* control buttons */
+
+.control-btns {
+    display: flex;
+    justify-items: center;
+}
+
+.control-btns button {
+    height: 40px;
+    border: 40px;
+    outline: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary_color);
+    color: var(--white_color);
+    cursor: pointer;
+    margin-top: 1.5em;
+    transition: 0.4s;
+}
+
+.control-btns button:not(:first-child) {
+    margin-left: 10px;
+}
+
+.control-btns button:active {
+    transform: scale(0.9);
+}
+
+.control-btns .disabled-btn {
+    transform: scale(0.9);
+}
+
+.control-btns .hide-view {
+    display: none !important
+}
+
+@media(max-width: 500px) {
+    .content-data {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0px;
+    }
+}
