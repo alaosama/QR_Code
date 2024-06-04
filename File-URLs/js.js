@@ -9,6 +9,8 @@ input.addEventListener('change', () => {
     f.addEventListener('load', () => {
         const url = f.result;
 
+        console.log(new Blob([url]).size);
+
         localStorage.setItem('file', url);
 
         const img = new Image();
@@ -16,6 +18,18 @@ input.addEventListener('change', () => {
 
         document.body.appendChild(img);
 
-        
-    })
+        const json = JSON.stringify({ a: "a", file: url});
+
+        fetch('http://httpbin.org/post', {
+            method: "POST",
+            body: json,
+            headers: {
+                "Content-type": "application/json"
+            }
+        })
+        .then(res => res.json())
+        .then(res => res.json())
+    });
+    
+    f.readAsDataURL({file});
 })
