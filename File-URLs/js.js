@@ -3,6 +3,17 @@ const input = document.querySelector('input[type="file"]');
 input.addEventListener('change', () => {
     
     const file = input.files[0];
+    console.log(file.size);
+
+    const url = URL.createObjectURL(file);
+
+    const img = new Image();
+    img.src = url;
+    document.body.appendChild(img);
+
+    console.log(url);
+
+    URL.revokeObjectURL(url);
 
     const f = new FileReader();
 
@@ -31,5 +42,5 @@ input.addEventListener('change', () => {
         .then(res => res.json())
     });
     
-    f.readAsDataURL({file});
+    f.readAsDataURL(file);
 })
