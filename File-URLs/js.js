@@ -1,46 +1,36 @@
-const input = document.querySelector('input[type="file"]');
+document.querySelector('#fileInput').addEventListener('change', () => {
+    const file = document.querySelector('#fileInput').files[0];
 
-input.addEventListener('change', () => {
-    
-    const file = input.files[0];
-    console.log(file.size);
+    if (file) {
+        console.log('File size:', file.size);
 
-    const url = URL.createObjectURL(file);
+        const fileReader = new FileReader();
 
-    const img = new Image();
-    img.src = url;
-    document.body.appendChild(img);
+        fileReader.onload = () => {
+            const fileURL = fileReader.result;
+            console.log('File URL:', fileURL);
 
-    console.log(url);
+            // Display image
+            const img = new Image();
+            img.src = fileURL;
+            document.body.appendChild(img);
 
-    URL.revokeObjectURL(url);
+            // Store in localStorage
+            localStorage.setItem('file', fileURL);
 
-    const f = new FileReader();
+            // Post to server
+            const json = JSON.stringify({ a: "a", file: fileURL });
+            fetch('http://httpbin.org/post', {
+                method: "POST",
+                body: json,
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(res => res.json())
+            .then(data => console.log('Server response:', data));
+        };
 
-    f.addEventListener('load', () => {
-        const url = f.result;
-
-        console.log(new Blob([url]).size);
-
-        localStorage.setItem('file', url);
-
-        const img = new Image();
-        img.src = localStorage.getItem('file');
-
-        document.body.appendChild(img);
-
-        const json = JSON.stringify({ a: "a", file: url});
-
-        fetch('http://httpbin.org/post', {
-            method: "POST",
-            body: json,
-            headers: {
-                "Content-type": "application/json"
-            }
-        })
-        .then(res => res.json())
-        .then(res => res.json())
-    });
-    
-    f.readAsDataURL(file);
-})
+        fileReader.readAsDataURL(file);
+    }
+});
