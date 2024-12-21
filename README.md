@@ -8,7 +8,7 @@ A project that generates QR codes for file or URL links. Implemented in HTML, CS
 
 ### 📝 Instructions
 
-To use the File-URLs project, open `Qr_Code/File-URLs/index.html` in your web browser.
+To use the File-URLs project, open `alaosama/Qr_Code/File-URLs/index.html` in your web browser.
 
 ### 👀 Preview
 
@@ -20,7 +20,7 @@ A QR code generator implemented in HTML, CSS, and JavaScript.
 
 ### 📝 Instructions
 
-Open `Qr_Code/QR-Generator/index.html` in your web browser to generate QR codes.
+Open `alaosama/Qr_Code/QR-Generator/index.html` in your web browser to generate QR codes.
 
 ### 👀 Preview
 
@@ -32,7 +32,7 @@ Another QR code generator project, also implemented in HTML, CSS, and JavaScript
 
 ### 📝 Instructions
 
-To use QR-Generator_2, navigate to `Qr_Code/QR-Generator_2/index.html` in your web browser.
+To use QR-Generator_2, navigate to `alaosama/Qr_Code/QR-Generator_2/index.html` in your web browser.
 
 ### 👀 Preview
 
@@ -44,7 +44,7 @@ A QR code reader application developed in HTML, CSS, and JavaScript.
 
 ### 📝 Instructions
 
-Open `Qr_Code/QR-Reader/index.html` in your web browser to start scanning QR codes.
+Open `alaosama/Qr_Code/QR-Reader/index.html` in your web browser to start scanning QR codes.
 
 ### 👀 Preview
 
@@ -56,7 +56,7 @@ A QR code scanning application implemented in HTML, CSS, and JavaScript.
 
 ### 📝 Instructions
 
-To use QR-Scanner, navigate to `Qr_Code/QR-Scanner/index.html` in your web browser.
+To use QR-Scanner, navigate to `alaosama/Qr_Code/QR-Scanner/index.html` in your web browser.
 
 ### 👀 Preview
 
